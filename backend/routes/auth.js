@@ -1,8 +1,13 @@
+// Import required packages
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
+// Used for request validation
 const { body, validationResult } = require('express-validator');
+
+// Used for password hashing
 const bcrypt = require('bcryptjs');
+// Used for JWT authentication
 const jwt = require('jsonwebtoken');
 const fetchuser = require('../middleware/fetchUser');
 
